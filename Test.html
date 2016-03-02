@@ -1,0 +1,539 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="L.png">
+
+    <title>Lahari Ganesha</title>
+	
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+   <!-- <script type="text/javascript" src="http://gc.kis.scr.kaspersky-labs.com/1B74BD89-2A22-4B93-B451-1C9E1052A0EC/main.js" charset="UTF-8"></script><script src="../../assets/js/ie-emulation-modes-warning.js"></script> -->
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="carousel.css" rel="stylesheet">
+	
+	<!-- jQuery -->
+	<!-- 1. Click show Hide -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#hide").click(function(){
+    $("#hiding").hide();
+  });
+  $("#show").click(function(){
+    $("#hiding").show();
+  });
+});
+</script>
+	<!-- 1.a Toggle -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#toggle").click(function(){
+    $("#1a").toggle();
+  });
+});
+</script>
+
+<!-- fadeIn() -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#fadeIn").dblclick(function(){
+    $("#div1a").fadeIn();
+    $("#div2a").fadeIn("slow");
+    $("#div3a").fadeIn(3000);
+  });
+});
+</script>
+
+<!-- fadeToggle() -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#fadeToggle").dblclick(function(){
+    $("#div1a").fadeToggle();
+    $("#div2a").fadeToggle("slow");
+    $("#div3a").fadeToggle(3000);
+  });
+});
+</script>
+
+<!-- fadeto -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#fadeto").dblclick(function(){
+    $("#div1a").fadeTo("slow",0.15);
+    $("#div2a").fadeTo("slow",0.4);
+    $("#div3a").fadeTo("slow",0.7);
+  });
+});
+</script>
+
+<!-- fadeOut -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#fadeOut").dblclick(function(){
+    $("#div1a").fadeOut();
+    $("#div2a").fadeOut("slow");
+    $("#div3a").fadeOut(3000);
+  });
+});
+</script> 
+
+<!-- fadeto -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#fadeto").(function(){
+    $("#div1a").fadeTo("slow",0.15);
+    $("#div2a").fadeTo("slow",0.4);
+    $("#div3a").fadeTo("slow",0.7);
+  });
+});
+</script>
+	
+	<!-- Mouse Enter -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script> 
+$(document).ready(function(){
+  $("#me").mouseenter(function(){
+    
+	$("#div2c").animate({
+     height:'300px',
+      width:'300px'
+    },2000);
+  }).mouseleave(function(){
+            $("#div2c").stop(true);;
+    });
+  });
+
+
+</script> 
+
+<!-- KeyPress Chain -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function()
+{
+$("#chain1").keypress(function(){
+$("#divchain1").fadeIn("slow").fadeOut().fadeIn(3000);
+});
+});
+</script>
+
+<!-- Keydown Chain -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("#animate").keydown(function(){
+    var div=$("#divkeydown");
+    div.animate({height:'500px',opacity:'0.8'},"slow").animate({width:'100px',opacity:'0.4'},"slow").animate
+
+({height:'500px',opacity:'0.5'},"slow").animate({width:'100px',opacity:'0.9'},"slow").animate
+
+({right:'100px',height:'500px',width:'500px'},"slow"); div.animate({fontSize:'4em'},"slow");
+  });
+
+  $("#stop").click(function(){
+    $("#divkeydown").stop(true);
+  });
+});
+</script>
+
+<!-- Table manupltion-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+
+  $('#table1').on('click', 'button', function(e){
+    $(this).parent().parent().remove();
+  });
+
+  var addRow = $('#add-row');
+  addRow.on('click', function(e){
+    var row = $('<tr />');
+    var button = $('<td><button>delete</button></td>');
+    for(var i=0;i<4;i++){
+        row.append($('<td data-editing="false" class="data">&nbsp;</td>'));
+    }
+    row.append(button);
+    $('#table1 > tbody').append(row);
+  });
+
+  $('#table1 > tbody').on('click', 'td.data', function(e){
+    var parent = this;
+    var isEditing = $(this).data('editing');
+    var input = $('<input type="text" placeholder="Enter value" autofocus="true" />');
+    if(!isEditing) {
+      $(this).html(input);
+      $(parent).data('editing', true);
+      $(input).keyup(function(e){
+        if(e.keyCode == 13) {
+          $(parent).html($(input).val());
+          $(parent).data('editing', false);
+        }
+      });
+    }
+  });
+
+  $('#table1 > tbody').on('mousemove', 'td', function(e){
+    if(e.altKey) {
+      $(this).css('background', 'blue');
+      $(this).css('color', 'red');
+    } else {
+      $(this).css('background', 'white');
+      $(this).css('color', 'black');
+    }
+  });
+
+  $('#table1 > tbody').on('mouseout', 'td', function(e){
+    $(this).css('background', 'white');
+    $(this).css('color', 'black');
+  });
+
+});
+
+</script>
+
+  </head>
+<!-- NAVBAR
+================================================== -->
+  <body>
+    <div class="navbar-wrapper">
+      <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#row1">Home</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="#row2">Projects</a></li>
+                <li><a href="#row3">Skills</a></li>
+				<li><a href="#row4">Question b.iii</a></li>
+                <li><a href="#table-manipulation">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+
+    <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+         <a href="#row1">  <img class="first-slide" style="width:100%;" src="welcome.jpg" alt="First slide"></a>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Know about Me! :) :) </h1>
+              <p>See about Lahari's Education!</p>
+              <p><a class="btn btn-lg btn-primary" href="#row1" role="button">Know Me!</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#row2"><img class="second-slide" style="width:100%;" src="project.jpg" alt="Second slide"></a>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>My Projects!</h1>
+              <p>See what prjects I have worked on!</p>
+              <p><a class="btn btn-lg btn-primary" href="#row2" role="button">Projects</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <a href="#row1"><img class="third-slide" style="width:100%;" src="skills.jpg" alt="Third slide"></a>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Technical Skills!</h1>
+              <p>See my Technical Skills</p>
+              <p><a class="btn btn-lg btn-primary" href="#row3" role="button">Skills</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="bulb.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Thought1</h2>
+          <p>When the going gets tough, only the tough gets going!</p>
+          <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/When_the_going_gets_tough,_the_tough_get_going" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="bulb.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>Thought 2</h2>
+          <p>If Winter Comes, Can Spring be far behind??</p>
+          <p><a class="btn btn-default" href="https://www.poets.org/poetsorg/poem/ode-west-wind" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="bulb.jpg" alt="Generic placeholder image" width="140" height="140">
+          <h2>And here you go!</h2>
+          <p>Awake, Arise and stop not till the goal is reached</p>
+          <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/Arise,_awake,_and_stop_not_till_the_goal_is_reached" role="button">See more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div id="row1" class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Education :) :)<span class="text-muted"> Learning Never Ends! :)</span></h2>
+          <p class="lead">Bchelors: Siddaganga Instite of Technology, Computer Science and Engineering, GPA: 8.89</p>
+		  <p class="lead">Masters: University of Texas at Dallas, Computer Science, GPA: 3.78</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="UTDallas.png" alt="Generic placeholder image"/>        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div id="row2" class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Projects!! <span class="text-muted">Its Fun!! :) :)</span></h2>
+          
+		  <p class="lead"> <strong>Event Planner:</strong> Developed the database in SQL to organize events. Database allows to store information arrangements/ facilities/ travel and Payment. Functionalities were implemented using PL/SQL</p>
+  <p class="lead"> <strong>Online Doctor:</strong> Designed this application, through which a patient can book an appointment online and video chat with a chosen doctor using Node.js, WebRTC and Java Servlets.</p>
+  <p class="lead"><strong>Security solutions to participatory sensing:</strong> Led a four member team to provide varying levels of security to data generated by participatory sensing applications based on geographical regions that the data travels using Eclipse tool. Project was appreciated and funded by <mark>Indian Institute of Science, Bangalore.</mark></p>
+  <p class="lead"><strong>Virtual backbone scheduling (VBS) to maximize the lifetime of WSNs:</strong> Implemented the idea of dynamically grouping the nodes (called VBS) in a WSN and only one of the groups is kept ON at a given time. The grouping is made in such a way that messages from any node have a valid path to the sink.</p>
+  <p class="lead"><strong>VI Editor:</strong> Designed a visual editor using C language. Operations like moving the cursor, copy/paste/delete a character/word, redraw screen, write and quit and quit without writing were implemented.</p>
+  <p class="lead"><strong>Hotel Management System:</strong> Developed this software using C++ to manage hotel bookings. </p>
+
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="project.jpg" alt="Generic placeholder image"/>
+        </div>
+      </div>
+
+     
+	  
+	  <hr class="featurette-divider">
+
+      <div id="row3" class="row featurette">
+        <div class="col-md-7">
+          <p class="featurette-heading">Skills :) <span class="text-muted">I built them!</span></p>
+          <p  class="lead">Programming: Java, Scala, C++, C, PL/SQL and  R </p>
+		  <p  class="lead">Web Development: JavaSript, JQuery, JSP, JSON, Bootstrap, HTML5, XML, CSS and Ajax (and Dreamweaver tool)</p>
+		   <p  class="lead">Database: RDBMS and MySQL</p>
+		   <p  class="lead">Tools/Framework: Spark, MapReduce, Hadoop, Oracle sqldeveloper, MATLAB, R Studio, Putty and Eclipse</p>
+		   <p  class="lead">Operating Systems: Windows and Linux.</p>
+		  
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="skills.jpg" alt="Generic placeholder image"/>
+		 
+        </div>
+		
+		</div>
+	  
+	  <div id="row4" class="row featurette">
+	  <!-- 1 and 1a -->
+	  <p class="featurette-heading">Question b.iii <span class="text-muted">All Six Effects!</span></p>
+	  <br>
+	  <p>Hide, Show and Hide/Show Toggle</p>
+	  <h3 id="hiding">I demonstrate Hide and Show</h3>
+	  <button id="hide">Hide</button>
+				<button id="show">Show</button>
+				<br>
+				 
+				<h4 id="1a">I demonstrate Hode/Show Toggle</h4>
+				  <button id="toggle">Toggle</button>		
+<br><br><br>
+				  <!-- fadeIn() -->
+				  <p>Demonstrate fadeIn() fadeOut() fadeTo() and fadeToggle()</p>
+<button id="fadeIn">Click to fade in boxes</button>
+<button id="fadeOut">Click to fadeOut boxes</button>
+<button id="fadeto">Click to fadeto boxes</button>
+<button id="fadeToggle">Click to fade Toggle boxes</button>
+
+<div id="div1a" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2a" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3a" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<br>
+
+<br><br>	 
+	 
+	 <p> Demontration of mouseenter() and mouseleace()</p>
+	 <!-- mouseenter and mouseleave -->
+<button id="me">Start Animation</button><br/><br/>
+<div id="div2c" style="background:#98bf21;height:100px;width:100px;">
+</div>
+
+<br><br><br>
+<p>Demonstration of chain events when a keypress() occurs!</p>
+<!-- keypress chaining event -->
+
+<p>Key press to fade in boxes</p>
+<input type="text" id="chain1"/>
+<br><br>
+
+<div id="divchain1" style="width:100px;height:100px;display:none;background-color:green;"></div><br>
+
+<br><br><br>
+
+<!-- Keydown Chain Events -->
+<p>Demonstrating Chaining of Animation events when Keydown event occurs! </p>
+<p>Key down here </p>
+<input id="animate" type="text"/>
+<button id="stop">Stop</button><br/><br/><br/><br/>
+<div id="divkeydown" style="background:green;height:300px;width:400px;"> Chaining of Animation events
+</div>
+</div>
+<br><br><br><br><br>
+
+
+<!-- Table-manipulation -->
+
+<section id="table-manipulation">
+ <h2> Contact Me! Leave me your details and I'll get back to You! </h2>       
+        <p>Click on the table cell to edit the field and press enter to save it. To add a new row click the add row button. To delete a row click on the delete button.</p>
+        <table id="table1">
+          <tbody>
+		  <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Email Address</th>
+            <th>Telephone Number</th>
+            <th>Actions</th>
+          </tr>
+            <tr>
+              <td class="data" data-editing="false">Ganesha</td>
+              <td class="data" data-editing="false">H N</td>
+              <td class="data" data-editing="false">ganesha_hn@hotmail.com</td>
+              <td class="data" data-editing="false">6787678756</td>
+              <td>
+                <button>delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="data" data-editing="false">Vishalakshi</td>
+              <td class="data" data-editing="false">K</td>
+              <td class="data" data-editing="false">vishalakshik@gmail.com</td>
+              <td class="data" data-editing="false">97345765556</td>
+              <td>
+                <button>delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="data" data-editing="false">Madhuri</td>
+              <td class="data" data-editing="false">Ganesha</td>
+              <td class="data" data-editing="false">madhuri_ganesha@gmail.com</td>
+              <td class="data" data-editing="false">56763456556</td>
+              <td>
+                <button>delete</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="data" data-editing="false">Prema</td>
+              <td class="data" data-editing="false">Whoosh</td>
+              <td class="data" data-editing="false">prema_whoosh@hotmail.com</td>
+              <td class="data" data-editing="false">54676546556</td>
+              <td>
+                <button>delete</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <br>
+        <button id="add-row">add row</button>
+      </section>
+
+      <!-- /END THE FEATURETTES -->
+
+<br><br><br><br><br>
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; Lahari Ganesha</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="../../assets/js/vendor/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
